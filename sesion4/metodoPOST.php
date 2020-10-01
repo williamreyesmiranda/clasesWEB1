@@ -49,7 +49,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-4">
-                    <form class="mt-5" action="supermercadoJ1.php" method="POST">
+                    <form class="mt-5" action="" method="POST">
                         <h4 class="text-center">ORDEN DE COMPRA</h4>
                         <div class="row">
                             <div class="col">
@@ -66,6 +66,7 @@
                         <div class="border">
                             <h4>
                                 <?php
+                                print_r($_POST) ;
                                 $producto = $_POST['producto'];
                                 $precio = $_POST['precio'];
                                 $precioEnvio = "8000";
