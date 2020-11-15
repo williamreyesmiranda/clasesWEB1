@@ -43,7 +43,7 @@ class BaseDatos
             echo "Error";
         }
     }
-
+//capturar datos
     public function consultarDatos($consultaSQL)
     {
         //establecer una conexion
@@ -58,6 +58,7 @@ class BaseDatos
         //obtener todos los datos
         return ($consultarDatos->fetchAll());
     }
+    //eliminar
     public function eliminarDatos($consultaSQL)
     {
          //establecer una conexion
@@ -70,6 +71,22 @@ class BaseDatos
         //verifico el resultado
         if ($resultado) {
             echo "Usuario Eliminado";
+        } else {
+            echo "Error";
+        }
+    }
+    public function editarDatos($consultaSQL)
+    {
+         //establecer una conexion
+         $conexionBD = $this->conectarBD();
+         //preparar consulta
+         $editarDatos = $conexionBD->prepare($consultaSQL);
+         //ejecutar la consulta
+        $resultado = $editarDatos->execute();
+
+        //verifico el resultado
+        if ($resultado) {
+            echo "Usuario Editado";
         } else {
             echo "Error";
         }

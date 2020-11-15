@@ -34,6 +34,13 @@
                         <textarea class="form-control" rows="4" name="descripcion"></textarea>
                     </div>
                 </div>
+                <div class="row mt-3">
+
+                    <div class="col">
+                        <label class="font-weight-bold">Imagen:</label>
+                        <textarea class="form-control" rows="1" name="img" placeholder="Ingrese la url de la fotografía"></textarea>
+                    </div>
+                </div>
 
                 <div class="row mt-3">
                     <div class="col align-self-end">
